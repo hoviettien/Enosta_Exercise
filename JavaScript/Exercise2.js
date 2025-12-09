@@ -1,14 +1,14 @@
 let students = [
-    {name: 'Tien', core: 8},
-    {name: 'Chien', core: 5},
-    {name: 'Hieu', core: 9},
-    {name: 'Duc', core: 6},
+    {name: 'Tien', score: 8},
+    {name: 'Chien', score: 5},
+    {name: 'Hieu', score: 9},
+    {name: 'Duc', score: 6},
 ];
 
 function getAboveThreshold(students , threshold){
     let listStudents = [];
     students.map(student => {
-        if (student.core > threshold){
+        if (student.score > threshold){
             listStudents.push(student.name);
         }
     });
@@ -18,7 +18,7 @@ function getAboveThreshold(students , threshold){
 function getAverageScore(students) {
     let totalScore = 0;
     students.forEach(student => {
-        totalScore += student.core
+        totalScore += student.score
     })
     return totalScore / students.length;
 }
